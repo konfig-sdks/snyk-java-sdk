@@ -1,10 +1,10 @@
-<div align="center">
+<div align="left">
 
 [![Visit Snyk](./header.png)](https://docs.snyk.io&#x2F;snyk-api&#x2F;snyk-rest-api-overview)
 
 # [Snyk](https://docs.snyk.io&#x2F;snyk-api&#x2F;snyk-rest-api-overview)
 
-Missing description placeholder
+Snyk helps software-driven businesses develop fast and stay secure. Continuously find and fix vulnerabilities for npm, Maven, NuGet, RubyGems, PyPI and more.
 
 </div>
 

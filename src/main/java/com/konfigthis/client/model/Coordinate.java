@@ -1,6 +1,6 @@
 /*
  * Snyk API
- * Missing description placeholder
+ * Snyk helps software-driven businesses develop fast and stay secure. Continuously find and fix vulnerabilities for npm, Maven, NuGet, RubyGems, PyPI and more.
  *
  * The version of the OpenAPI document: REST
  * 
@@ -349,11 +349,11 @@ public class Coordinate {
   }
 
    /**
-   * A list of precise locations that surface an issue. A coordinate may have multiple representations. For example, a package vulnerability may be represented both by its package dependency graph traversal, and by the location in a package manifest that introduced the dependency. 
+   * A list of precise locations that surface an issue. A coordinate may have multiple representations. 
    * @return representations
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "A list of precise locations that surface an issue. A coordinate may have multiple representations. For example, a package vulnerability may be represented both by its package dependency graph traversal, and by the location in a package manifest that introduced the dependency. ")
+  @ApiModelProperty(value = "A list of precise locations that surface an issue. A coordinate may have multiple representations. ")
 
   public List<Object> getRepresentations() {
     return representations;

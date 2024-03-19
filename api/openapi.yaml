@@ -1,6 +1,8 @@
 openapi: 3.0.3
 info:
-  description: Missing description placeholder
+  description: "Snyk helps software-driven businesses develop fast and stay secure.\
+    \ Continuously find and fix vulnerabilities for npm, Maven, NuGet, RubyGems, PyPI\
+    \ and more."
   title: Snyk API
   version: REST
   x-konfig-ignore:
@@ -3247,7 +3249,7 @@ paths:
           type: string
         style: form
       - description: |
-          The start date (inclusive) of the audit logs search. Example: 2023-07-27
+          The start date (inclusive) of the audit logs search. If this is not specified, the start of yesterday is used. Example: 2023-07-27
         explode: true
         in: query
         name: from
@@ -6605,7 +6607,7 @@ paths:
           format: uuid
           type: string
           x-konfig-original-example: b667f176-df52-4b0a-9954-117af6b05ab7
-          x-konfig-generated-schema: konfig-generated-schema-components-parameters-OrgId-schema
+          x-konfig-generated-schema: konfig-generated-schema-paths--orgs-org_id-get-parameters-1-schema
         style: simple
       responses:
         "200":
@@ -6786,7 +6788,7 @@ paths:
           format: uuid
           type: string
           x-konfig-original-example: b667f176-df52-4b0a-9954-117af6b05ab7
-          x-konfig-generated-schema: konfig-generated-schema-components-parameters-OrgId-schema
+          x-konfig-generated-schema: konfig-generated-schema-paths--orgs-org_id-patch-parameters-1-schema
         style: simple
       requestBody:
         content:
@@ -17030,7 +17032,7 @@ paths:
           type: string
         style: form
       - description: |
-          The start date (inclusive) of the audit logs search. Example: 2023-07-27
+          The start date (inclusive) of the audit logs search. If this is not specified, the start of yesterday is used. Example: 2023-07-27
         explode: true
         in: query
         name: from
@@ -22843,6 +22845,7 @@ paths:
       - 2022-03-31~experimental
       - 2022-12-06~beta
       - 2023-03-20
+      - 2024-03-12~experimental
       x-snyk-api-version: 2023-03-20
       x-konfig-operation-can-have-single-parameter: true
       x-konfig-single-parameter-schema: konfig-generated-schema-single-parameter-schema-get--orgs-org_id-projects-project_id-sbom
@@ -30747,17 +30750,14 @@ components:
       x-konfig-original-example:
       - gcr.io/snyk/redis:5
     OrgId:
-      description: Unique identifier for org
+      description: Unique identifier for an organization
       explode: false
       in: path
       name: org_id
       required: true
       schema:
-        example: b667f176-df52-4b0a-9954-117af6b05ab7
         format: uuid
         type: string
-        x-konfig-original-example: b667f176-df52-4b0a-9954-117af6b05ab7
-        x-konfig-generated-schema: konfig-generated-schema-components-parameters-OrgId-schema
       style: simple
     PackageUrl:
       description: "A URI-encoded Package URL (purl). Supported purl types are apk,\
@@ -30810,16 +30810,15 @@ components:
       style: form
       x-konfig-original-example: linux/amd64
     ProjectId:
-      description: The ID of the container project that the custom base image is based
-        off of.
-      explode: true
-      in: query
+      description: Unique identifier for a project
+      explode: false
+      in: path
       name: project_id
-      required: false
+      required: true
       schema:
         format: uuid
         type: string
-      style: form
+      style: simple
     QueryNameFilter:
       description: Only return organizations whose name contains this value. Case
         insensitive.
@@ -31815,10 +31814,7 @@ components:
           type: array
         representations:
           description: |
-            A list of precise locations that surface an issue.
-            A coordinate may have multiple representations. For example, a package vulnerability may be represented both
-            by its package dependency graph traversal, and by the location in a package manifest that introduced the
-            dependency.
+            A list of precise locations that surface an issue. A coordinate may have multiple representations.
           items: {}
           maxItems: 5
           minItems: 1
@@ -59290,6 +59286,14 @@ components:
       example: ga
       type: string
       x-do-not-generate: true
+    konfig-generated-schema-paths--orgs-org_id-get-parameters-1-schema:
+      example: b667f176-df52-4b0a-9954-117af6b05ab7
+      type: string
+      x-do-not-generate: true
+    konfig-generated-schema-paths--orgs-org_id-patch-parameters-1-schema:
+      example: b667f176-df52-4b0a-9954-117af6b05ab7
+      type: string
+      x-do-not-generate: true
     konfig-generated-schema-paths--orgs-org_id-app_bots-get-responses-400-headers-snyk-version-lifecycle-stage-schema:
       example: ga
       type: string
@@ -59965,10 +59969,6 @@ components:
     konfig-generated-schema-components-parameters-Limit-schema:
       example: 10
       type: number
-      x-do-not-generate: true
-    konfig-generated-schema-components-parameters-OrgId-schema:
-      example: b667f176-df52-4b0a-9954-117af6b05ab7
-      type: string
       x-do-not-generate: true
     konfig-generated-schema-components-parameters-PathGroupId-schema:
       example: b667f176-df52-4b0a-9954-117af6b05ab7
@@ -87506,7 +87506,7 @@ components:
           format: uuid
           type: string
           x-konfig-original-example: b667f176-df52-4b0a-9954-117af6b05ab7
-          x-konfig-generated-schema: konfig-generated-schema-components-parameters-OrgId-schema
+          x-konfig-generated-schema: konfig-generated-schema-paths--orgs-org_id-get-parameters-1-schema
       required:
       - org_id
       - version
@@ -87524,7 +87524,7 @@ components:
           format: uuid
           type: string
           x-konfig-original-example: b667f176-df52-4b0a-9954-117af6b05ab7
-          x-konfig-generated-schema: konfig-generated-schema-components-parameters-OrgId-schema
+          x-konfig-generated-schema: konfig-generated-schema-paths--orgs-org_id-patch-parameters-1-schema
         data:
           properties:
             attributes:
@@ -93037,5 +93037,5 @@ components:
       x-konfig-globally-required-security: false
 x-optic-url: https://app.useoptic.com/organizations/390ef489-882c-48ba-acb3-4e0b73e48767/apis/5Tz5UMTNEIuz5-FZ6J2ki
 x-snyk-api-lifecycle: released
-x-snyk-api-version: 2024-02-28
+x-snyk-api-version: 2024-03-12
 

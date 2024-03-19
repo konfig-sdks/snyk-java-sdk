@@ -43,7 +43,7 @@ public class Example {
     String version = "2021-06-04"; // The requested version of the endpoint to process the request
     UUID groupId = UUID.fromString("0d3728ec-eebf-484d-9907-ba238019f10b"); // The ID of the Group.
     String cursor = "cursor_example"; // The ID for the next page of results.
-    LocalDate from = LocalDate.now(); // The start date (inclusive) of the audit logs search. Example: 2023-07-27 
+    LocalDate from = LocalDate.now(); // The start date (inclusive) of the audit logs search. If this is not specified, the start of yesterday is used. Example: 2023-07-27 
     LocalDate to = LocalDate.now(); // The end date (inclusive) of the audit logs search. Example: 2023-07-27 
     Integer size = 10; // Number of results to return per page.
     String sortOrder = "ASC"; // Order in which results are returned.
@@ -116,7 +116,7 @@ public class Example {
 | **version** | **String**| The requested version of the endpoint to process the request | |
 | **groupId** | **UUID**| The ID of the Group. | |
 | **cursor** | **String**| The ID for the next page of results. | [optional] |
-| **from** | **LocalDate**| The start date (inclusive) of the audit logs search. Example: 2023-07-27  | [optional] |
+| **from** | **LocalDate**| The start date (inclusive) of the audit logs search. If this is not specified, the start of yesterday is used. Example: 2023-07-27  | [optional] |
 | **to** | **LocalDate**| The end date (inclusive) of the audit logs search. Example: 2023-07-27  | [optional] |
 | **size** | **Integer**| Number of results to return per page. | [optional] |
 | **sortOrder** | **String**| Order in which results are returned. | [optional] [default to DESC] [enum: ASC, DESC] |
@@ -178,7 +178,7 @@ public class Example {
     String version = "2021-06-04"; // The requested version of the endpoint to process the request
     UUID orgId = UUID.fromString("0d3728ec-eebf-484d-9907-ba238019f10b"); // The ID of the organization.
     String cursor = "cursor_example"; // The ID for the next page of results.
-    LocalDate from = LocalDate.now(); // The start date (inclusive) of the audit logs search. Example: 2023-07-27 
+    LocalDate from = LocalDate.now(); // The start date (inclusive) of the audit logs search. If this is not specified, the start of yesterday is used. Example: 2023-07-27 
     LocalDate to = LocalDate.now(); // The end date (inclusive) of the audit logs search. Example: 2023-07-27 
     Integer size = 10; // Number of results to return per page.
     String sortOrder = "ASC"; // Order in which results are returned.
@@ -251,7 +251,7 @@ public class Example {
 | **version** | **String**| The requested version of the endpoint to process the request | |
 | **orgId** | **UUID**| The ID of the organization. | |
 | **cursor** | **String**| The ID for the next page of results. | [optional] |
-| **from** | **LocalDate**| The start date (inclusive) of the audit logs search. Example: 2023-07-27  | [optional] |
+| **from** | **LocalDate**| The start date (inclusive) of the audit logs search. If this is not specified, the start of yesterday is used. Example: 2023-07-27  | [optional] |
 | **to** | **LocalDate**| The end date (inclusive) of the audit logs search. Example: 2023-07-27  | [optional] |
 | **size** | **Integer**| Number of results to return per page. | [optional] |
 | **sortOrder** | **String**| Order in which results are returned. | [optional] [default to DESC] [enum: ASC, DESC] |

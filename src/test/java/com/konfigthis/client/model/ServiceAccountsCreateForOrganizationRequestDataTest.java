@@ -1,6 +1,6 @@
 /*
  * Snyk API
- * Missing description placeholder
+ * Snyk helps software-driven businesses develop fast and stay secure. Continuously find and fix vulnerabilities for npm, Maven, NuGet, RubyGems, PyPI and more.
  *
  * The version of the OpenAPI document: REST
  * 

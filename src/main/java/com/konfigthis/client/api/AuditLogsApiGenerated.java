@@ -1,6 +1,6 @@
 /*
  * Snyk API
- * Missing description placeholder
+ * Snyk helps software-driven businesses develop fast and stay secure. Continuously find and fix vulnerabilities for npm, Maven, NuGet, RubyGems, PyPI and more.
  *
  * The version of the OpenAPI document: REST
  * 
@@ -222,7 +222,7 @@ public class AuditLogsApiGenerated {
         
         /**
          * Set from
-         * @param from The start date (inclusive) of the audit logs search. Example: 2023-07-27  (optional)
+         * @param from The start date (inclusive) of the audit logs search. If this is not specified, the start of yesterday is used. Example: 2023-07-27  (optional)
          * @return SearchGroupAuditLogsRequestBuilder
          */
         public SearchGroupAuditLogsRequestBuilder from(LocalDate from) {
@@ -528,7 +528,7 @@ public class AuditLogsApiGenerated {
         
         /**
          * Set from
-         * @param from The start date (inclusive) of the audit logs search. Example: 2023-07-27  (optional)
+         * @param from The start date (inclusive) of the audit logs search. If this is not specified, the start of yesterday is used. Example: 2023-07-27  (optional)
          * @return SearchOrganizationAuditLogsRequestBuilder
          */
         public SearchOrganizationAuditLogsRequestBuilder from(LocalDate from) {
